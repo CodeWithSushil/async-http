@@ -23,6 +23,10 @@ composer require async-http/async-http
 ## Example
 
 ```php
+<?php
+
+require ("vendor/autoloader.php");
+
 use Async\Http\AsyncHttpClient;
 
 $client = new AsyncHttpClient();
