@@ -1,33 +1,55 @@
 {
-    "name": "async-http/async-http",
-    "description": "Async HTTP client",
-    "type": "library",
-    "require": {
-        "php": "^8.3",
-        "ext-sockets": "*",
-        "psr/http-client": "^1.0",
-        "psr/http-message": "^2.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^12.2",
-        "phpstan/phpstan": "^2.1",
-        "laravel/pint": "^1.23"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Async\\Http\\": "src/Http/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Sushil Kumar",
-            "email": "sushilkumbhar77@gmail.com"
-        }
-    ],
-    "scripts": {
-        "test": "vendor/bin/phpunit"
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+  "name": "async-http/async-http",
+  "description": "🚀 Async, non-blocking HTTP client using PHP streams",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Async\\Http\\": "src/Http/"
+    }
+  },
+  "autoload-dev" {
+      "psr-4": {
+          "Tests\\": "tests/"
+      }
+  },
+  "require": {
+    "php": ">=8.1",
+    "psr/http-client": "^1.0",
+    "psr/http-message": "^2.0"
+  },
+  "require-dev": {
+      "phpunit/phpunit": "^12.2",
+      "phpstan/phpstan": "^2.1",
+      "laravel/pint": "^1.23"
+  },
+  "support": {
+  "issues": "https://github.com/CodeWithSushil/async-http/issues",
+  "source": "https://github.com/CodeWithSushil/async-http"
+},
+  "authors": [
+      {
+        "name": "Sushil Kumar",
+        "email": "sushilkumbhar77@gmail.com"
+      }
+  ],
+  "funding": [
+  {
+    "type": "github",
+    "url": "https://github.com/sponsors/CodeWithSushil"
+  }
+],
+  "scripts": {
+      "test": "vendor/bin/phpunit"
+  }
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
