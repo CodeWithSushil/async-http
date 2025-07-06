@@ -3,6 +3,8 @@
 [![Packagist Version](https://img.shields.io/packagist/v/async-http/async-http.svg)](https://packagist.org/packages/async-http/async-httpi)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/async-http/async-http?style=flat&logo=composer&color=blue)
 [![Tests](https://github.com/CodeWithSushil/async-http/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/CodeWithSushil/async-http/actions/workflows/tests.yml)
+[![CodeQL](https://github.com/CodeWithSushil/async-http/actions/workflows/github-code-scanning/codeql/badge.svg?branch=master)](https://github.com/CodeWithSushil/async-http/actions/workflows/github-code-scanning/codeql)
+
 
 A fully async, non-blocking HTTP client built using `stream_socket_client` and `stream_select`. No cURL. No Guzzle.
 
