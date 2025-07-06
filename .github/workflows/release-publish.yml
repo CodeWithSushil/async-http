@@ -1,0 +1,46 @@
+name: Release & Publish
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    name: Generate Changelog and Publish Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Generate Release Notes
+        uses: RedCrafter07/release-notes-actions@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          outputFile: CHANGELOG.md
+
+      - name: Update Changelog file
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          release-date: ${{ github.event.head_commit.timestamp }}
+          latest-version: ${{ github.ref_name }}
+          changelog-path: ./CHANGELOG.md
+
+      - name: Commit updated changelog
+        run: |
+          git add CHANGELOG.md
+          git commit -m "chore: update changelog for ${{ github.ref_name }}"
+          git push
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ github.ref_name }}
+          body_path: ./CHANGELOG.md
+          token: ${{ secrets.GITHUB_TOKEN }}
