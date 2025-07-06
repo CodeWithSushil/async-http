@@ -1,5 +1,5 @@
 <?php
-namespace AsyncHttp\Http;
+namespace Async\Http;
 
 class MultiAsyncHandler
 {
