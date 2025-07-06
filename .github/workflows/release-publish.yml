@@ -20,7 +20,7 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Generate Release Notes
-        uses: RedCrafter07/release-notes-actions@main
+        uses: RedCrafter07/release-notes-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           outputFile: CHANGELOG.md
