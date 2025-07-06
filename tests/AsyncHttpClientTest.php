@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests;
+
 use Async\Http\AsyncHttpClient;
 use PHPUnit\Framework\TestCase;
 
