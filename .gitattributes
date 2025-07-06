@@ -1,0 +1,26 @@
+# Export only these files for Composer installs
+/composer.json     export-ignore
+/phpstan.neon.dist export-ignore
+/phpunit.xml       export-ignore
+/tests             export-ignore
+/.github           export-ignore
+/.gitignore        export-ignore
+/.editorconfig     export-ignore
+/.gitattributes    export-ignore
+/CHANGELOG.md      export-ignore
+
+# Normalize text files to LF
+* text=auto
+
+# Ensure PHP files are UTF-8 and LF
+*.php text eol=lf
+
+# Treat Markdown files as text
+*.md text
+
+# Treat YAML files as text
+*.yml text
+*.yaml text
+
+# Treat JSON files as text
+*.json text
