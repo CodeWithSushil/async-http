@@ -23,7 +23,7 @@ composer require async-http/async-http
 ## Example
 
 ```php
-use AsyncHttp\Http\AsyncHttpClient;
+use Async\Http\AsyncHttpClient;
 
 $client = new AsyncHttpClient();
 foreach ($client->get('https://jsonplaceholder.typicode.com/posts/1') as $response) {
@@ -34,8 +34,8 @@ foreach ($client->get('https://jsonplaceholder.typicode.com/posts/1') as $respon
 ## Parallel Requests
 
 ```php
-use AsyncHttp\Http\AsyncHttpClient;
-use AsyncHttp\Http\MultiAsyncHandler;
+use Async\Http\AsyncHttpClient;
+use Async\Http\MultiAsyncHandler;
 
 $client = new AsyncHttpClient();
 $multi = new MultiAsyncHandler();
