@@ -11,8 +11,7 @@ A fully async, non-blocking HTTP client built using `stream_socket_client` and `
 - 🔁 Multiple async requests in parallel
 - 🔄 Retries and timeout support
 - 🧩 PSR-18 / PSR-7 compatible
-- ✅ GET, POST, PUT, PATCH, DELETE support
-- 📦 Composer-ready
+- ✅ GET, POST, PUT, PATCH, DELETE supported
 
 ## Install
 
@@ -25,7 +24,7 @@ composer require async-http/async-http
 ```php
 <?php
 
-require ("vendor/autoloader.php");
+require_once('vendor/autoload.php');
 
 use Async\Http\AsyncHttpClient;
 
@@ -38,6 +37,10 @@ foreach ($client->get('https://jsonplaceholder.typicode.com/posts/1') as $respon
 ## Parallel Requests
 
 ```php
+<?php
+
+require_once('vendor/autoload.php');
+
 use Async\Http\AsyncHttpClient;
 use Async\Http\MultiAsyncHandler;
 
