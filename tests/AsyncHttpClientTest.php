@@ -1,8 +1,7 @@
 <?php
 
+use Async\Http\AsyncHttpClient;
 use PHPUnit\Framework\TestCase;
-
-// use Async\Http\AsyncHttpClient;
 
 class AsyncHttpClientTest extends TestCase
 {
