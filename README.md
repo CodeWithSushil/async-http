@@ -1,6 +1,6 @@
 # Async HTTP Client for PHP
 
-[![Packagist Version](https://img.shields.io/packagist/v/codewithsushil/async-http-client.svg)](https://packagist.org/packages/codewithsushil/async-http-client)
+[![Packagist Version](https://img.shields.io/packagist/v/async-http/async-http.svg)](https://packagist.org/packages/async-http/async-http)
 [![Tests](https://github.com/CodeWithSushil/async-http/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/CodeWithSushil/async-http/actions/workflows/tests.yml)
 
 A fully async, non-blocking HTTP client built using `stream_socket_client` and `stream_select`. No cURL. No Guzzle.
