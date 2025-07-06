@@ -17,8 +17,8 @@ A fully async, non-blocking HTTP client built using `stream_socket_client` and `
 ## Install
 
 ```bash
-
-```composer require async-http/async-http
+composer require async-http/async-http
+```
 
 ## Example
 
