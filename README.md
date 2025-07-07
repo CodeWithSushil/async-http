@@ -31,8 +31,10 @@ require_once('vendor/autoload.php');
 
 use Async\Http\AsyncHttpClient;
 
+$url = 'https://jsonplaceholder.typicode.com/posts';
+
 $client = new AsyncHttpClient();
-foreach ($client->get('https://jsonplaceholder.typicode.com/posts/1') as $response) {
+foreach ($client->get($url) as $response) {
     echo $response->getBody();
 }
 ```
