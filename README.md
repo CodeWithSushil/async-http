@@ -37,29 +37,3 @@ foreach ($client->get('https://jsonplaceholder.typicode.com/posts/1') as $respon
 }
 ```
 
-## Parallel Requests
-
-```php
-<?php
-
-require_once('vendor/autoload.php');
-
-use Async\Http\AsyncHttpClient;
-use Async\Http\MultiAsyncHandler;
-
-$client = new AsyncHttpClient();
-$multi = new MultiAsyncHandler();
-
-$urls = [
-    'https://jsonplaceholder.typicode.com/posts/1',
-    'https://jsonplaceholder.typicode.com/posts/2',
-];
-
-foreach ($urls as $url) {
-    $multi->add(fn() => $client->get($url), function($res) use ($url) {
-        echo "[$url] => " . substr($res->getBody(), 0, 80) . "\n";
-    });
-}
-
-$multi->run();
-```
